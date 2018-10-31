@@ -30,11 +30,11 @@ function draw() {
 
 }
   function mouseDragged() {
-  background(mouseY,mouseX,50)
+  background(mouseY,mouseX,50) // drag and move mouse around to make circle go up and cange background
   up--
 }
 
-function keyPressed() {
+function keyPressed() {   //press a key to make a cat appear
   background(0)
   stroke(255)
   triangle(250,215,300,200,290,255) //right ear
@@ -50,7 +50,7 @@ function keyPressed() {
 }
 
 
-function mousePressed() {
+function mousePressed() {  //press the mouse to make fish appear
 fill(100,183,219)
 triangle(50,100,95,75,98,115) //left fish
 ellipse(50,100,40,40)
