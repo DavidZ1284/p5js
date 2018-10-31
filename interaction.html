@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script>
+    var direct;
+var up;
+function setup() {
+  createCanvas(400, 400);
+ 
+  direct = 200;
+  up = 325;
+}
+
+
+function draw() {
+
+  fill(200)  
+  strokeWeight(3)
+  ellipseMode(CENTER)
+  ellipse(direct,up,250,250) //grey circle
+  fill(255)
+  strokeWeight(1)
+  fill(0)
+  rectMode(CORNERS) //black bar
+  rect(width - 1,height - 100,0,height)
+
+
+}
+  function mouseDragged() {
+  background(mouseY,mouseX,50)
+  up--
+}
+
+function keyPressed() {
+  background(0)
+  stroke(255)
+  triangle(250,215,300,200,290,255) //right ear
+  triangle(150,215,100,200,110,255) //left ear
+  ellipse(width/2,height - 100,200,200) //head
+  fill(255)
+  ellipse(width - 150,height - 100,55,45) //right eye
+  ellipse(width - 250,height - 100,55,45) //left eye
+  fill(0)
+  ellipse(width-150,height-100,25,25) //right pupil
+  ellipse(width - 250, height-100,25,25) //left pupil
+  ellipse(width - 75,height-100,30,50) //paw
+}
+
+
+function mousePressed() {
+fill(100,183,219)
+triangle(50,100,95,75,98,115) //left fish
+ellipse(50,100,40,40)
+strokeWeight(3)
+point(40,95)
+strokeWeight(1)
+triangle(250,120,250,180,300,145) //right fish
+ellipse(305,150,60,60)
+strokeWeight(3)
+point(310,140)
+}
+
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/DavidZ1284/p5js/blob/master/interaction.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
